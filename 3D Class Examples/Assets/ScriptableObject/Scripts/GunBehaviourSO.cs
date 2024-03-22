@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheatGun : MonoBehaviour
+[CreateAssetMenu(fileName = "New Gun Behaviour", menuName = "ScriptableObject/Gun Behaviour")]
+public class GunBehaviourSO : ScriptableObject
 {
     public float gunRange = 10;
     public float gunImpactForce = 10;
@@ -10,26 +11,20 @@ public class CheatGun : MonoBehaviour
     public GameObject gunDecal;
     public GameObject gunSFX;
 
-    private void Start()
+    public virtual void OnClickBehaviour(WeaponHandler handler)
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        PistolShot(handler);
     }
-
-    // Update is called once per frame
-    void Update()
+    void PistolShot(WeaponHandler handler)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-    }
-
-    void Shoot()
-    {
+        Instantiate(gunSFX, handler.transform.position, Quaternion.identity);
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        Shoot(handler, ray);
+    }
 
-        Instantiate(gunSFX, transform.position, Quaternion.identity);
+    protected void Shoot(WeaponHandler handler, Ray ray)
+    {
+
 
         if (Physics.Raycast(ray, out RaycastHit hit, gunRange, gunMask))
         {
@@ -41,7 +36,7 @@ public class CheatGun : MonoBehaviour
 
                 if (hit.rigidbody)
                 {
-                    hit.rigidbody.AddForceAtPosition((hit.point - transform.position).normalized * gunImpactForce, hit.point);
+                    hit.rigidbody.AddForceAtPosition((hit.point - handler.transform.position).normalized * gunImpactForce, hit.point);
 
                 }
 

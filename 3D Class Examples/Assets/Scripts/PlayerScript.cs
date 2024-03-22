@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
 
         mov.direction = relativeDirection;
     }
-
+        
     Vector3 RelativeToCamera(Vector2 v)
     {
 

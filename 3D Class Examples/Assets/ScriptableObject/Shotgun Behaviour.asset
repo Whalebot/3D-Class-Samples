@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3161990fad8984f9464006587d9b73, type: 3}
+  m_Name: Shotgun Behaviour
+  m_EditorClassIdentifier: 
+  gunRange: 10
+  gunImpactForce: 10
+  gunMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  gunDecal: {fileID: 6600255890028492455, guid: e9097e0daa60e0643a1430f2e4920830,
+    type: 3}
+  gunSFX: {fileID: 2874284878754666, guid: 9334cbba13106214a953eb2d8307895d, type: 3}
+  shotgunBulletsPerShot: 20
+  shotgunSpread: 0.1

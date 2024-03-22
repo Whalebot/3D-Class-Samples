@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3829717c6c0a44581a22860b043a03, type: 3}
+  m_Name: Gun
+  m_EditorClassIdentifier: 
+  reticle: {fileID: 21300000, guid: fdf9900be8b9ada4890aa076945e58fc, type: 3}
+  behaviours:
+  - {fileID: 11400000, guid: d647929af341bae4fa9107d21b576838, type: 2}
+  - {fileID: 11400000, guid: 032259bafcdfd094aa7c6592d7e9916b, type: 2}
