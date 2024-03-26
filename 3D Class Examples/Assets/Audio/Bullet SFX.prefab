@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2184545255822708214}
   - component: {fileID: 5834810171073164473}
-  - component: {fileID: -99262805603462177}
+  - component: {fileID: 7737465463124328035}
   m_Layer: 0
   m_Name: Bullet SFX
   m_TagString: Untagged
@@ -129,7 +129,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-99262805603462177
+--- !u!114 &7737465463124328035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
